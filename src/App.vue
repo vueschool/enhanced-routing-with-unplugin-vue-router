@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router/auto";
 import HelloWorld from "./components/HelloWorld.vue";
+import type { RouteNamedMap } from "vue-router/auto-routes";
+
+const routes: Partial<RouteNamedMap> = {};
+
+routes["/users/[id]"]?.params.id;
 </script>
 
 <template>
