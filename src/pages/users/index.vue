@@ -7,7 +7,15 @@ import { RouterLink } from "vue-router/auto";
     <ul>
       <li>List of all my users</li>
       <li>
-        <RouterLink to="/users/1">User 1</RouterLink>
+        <RouterLink
+          :to="{
+            name: '/users/[id]',
+            params: {
+              id: '1',
+            },
+          }"
+          >User 1</RouterLink
+        >
       </li>
       <li>
         <RouterLink to="/users/2">User 2</RouterLink>
